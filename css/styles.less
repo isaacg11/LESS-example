@@ -1,0 +1,62 @@
+/*LESS Variables for Colors*/
+@primary-color:#E70909;
+@accent-color:#422C2C;
+@forground-color:#F8F3F3;
+@background-color:#CBC6C6;
+@text-shadow-color:#5f2c17;
+@font-family: 'Jim Nightshade', cursive;
+
+/*LESS Variables for Text  */
+@text-shadow: 2px 2px 2px;
+
+/*LESS Variables for fonts  */
+@font-base-size:14px;
+
+h1 {
+   font-size: @font-base-size + 10;
+}
+h2 {
+   font-size: @font-base-size + 6;
+}
+h3 {
+   font-size: @font-base-size + 4 ;
+}
+
+/* LESS mixins */
+.rounded-corners(@size) {
+   border-radius:@size;
+  -moz-border-radius: @size;
+  -webkit-border-radius: @size;
+  -o-border-radius: @size;
+}
+
+h1 {
+   border: 2px solid red;
+   .rounded-corners(5px);
+}
+
+/* LESS nesting rules  */
+nav {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  padding-left: 5px;
+  font-weight: bold;
+  ul {
+    list-style: none;
+    padding: 0px;
+        li {
+          display: inline;;
+        }
+     }
+}
+
+/* LESS rule combinator */
+a {
+ text-decoration:none;
+ &:hover {
+   text-decoration:underline;
+   color: @primary-color;
+ }
+}
